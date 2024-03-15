@@ -1,0 +1,65 @@
+<mat-toolbar color="primary">
+  <span
+    *ngIf="isLoggedIn"
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+    (click)="sidenav.toggle()"
+  >
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> menu </mat-icon>
+  </span>
+  <img src="../../../assets/logo-no-background.svg" alt="" class="img" />
+
+  <span routerLink="/" class="title"><p>SHARPMINDS</p></span>
+  <span class="example-spacer"></span>
+
+  <!-- <span *ngIf="!isLoggedIn" routerLink="/login" class="mr10 radius">
+    Login
+  </span>
+
+  <span *ngIf="!isLoggedIn" routerLink="/signup" class="mr10 radius">
+    Signup
+  </span> -->
+  <p>
+    <span *ngIf="isLoggedIn && user" class="radius" routerLink="/profile">
+      {{ user.username }}
+    </span>
+  </p>
+  <p>
+    <span *ngIf="isLoggedIn" (click)="logout()" class="radius"> Logout </span>
+  </p>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav
+    #sidenav="matSidenav"
+    (click)="sidenav.toggle()"
+    opened
+    mode="side"
+  >
+    <app-user-sidebar></app-user-sidebar>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<!-- <ng-container
+    *ngIf="user.type == 'admin'; then admin; else otheruser">
+  </ng-container>
+  
+  <ng-template #admin>
+    <div>
+      Admin.
+      <li routerLinkActive="active" >
+            <a routerLink="/adminDashboard">
+              <i class="now-ui-icons education_atom"></i>
+              <p>Admin Dashboard</p>
+            </a>
+          </li>
+    </div>
+  </ng-template>
+  <ng-template #otheruser>
+    <div>
+      other user 
+    </div> -->

@@ -1,0 +1,53 @@
+<div class="container mt-2">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <mat-card class="p-4">
+        <mat-card-title>Read the instructions carefully</mat-card-title>
+        <div class="mb-4">One more step to go</div>
+        <div>
+          <mat-card-title>
+            {{ quiz.title }}
+          </mat-card-title>
+          <mat-card-subtitle>{{ quiz.description }} </mat-card-subtitle>
+        </div>
+        <mat-divider></mat-divider>
+        <mat-card-content class="mt-4">
+          <h2>Important Instructions</h2>
+          <ul>
+            <li>Read the questions carefully</li>
+            <li>All questions are MCQ types</li>
+            <li>
+              There are <b>{{ quiz.numberOfQuestions }} Questions</b> in this
+              quiz
+            </li>
+            <li>
+              Time limit is
+              <b>{{ quiz.numberOfQuestions * 2 }} minutes only</b>
+            </li>
+            <li>
+              Each question carries
+              <b>{{ quiz.maxMarks / quiz.numberOfQuestions }} marks</b>
+            </li>
+            <li>After time finished quiz will be submitted automatically</li>
+          </ul>
+          <ul>
+            <li>Click <b>Start</b> to start the quiz</li>
+            <li>You can not resume the quiz if gets interuppted</li>
+            <li>Time will start when you click the quiz</li>
+            <li>Report will be generated in pdf form</li>
+          </ul>
+          <div class="container">
+            <button
+              mat-raised-button
+              color="primary"
+              class="full-width"
+              (click)="startQuiz()"
+            >
+              Start
+            </button>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

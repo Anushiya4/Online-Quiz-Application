@@ -1,0 +1,36 @@
+<div class="container-fluid mt-3">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <mat-card>
+        <div class="mat-headline text-center mb-4">Update Category</div>
+        <form *ngIf="categories" (ngSubmit)="updateCategory()">
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Title</mat-label>
+            <input
+              required
+              [(ngModel)]="categories.title"
+              name="title"
+              matInput
+              placeholder="Enter Title here"
+            />
+          </mat-form-field>
+
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Description</mat-label>
+            <textarea
+              matInput
+              placeholder="Enter Description here"
+              rows="10"
+              [(ngModel)]="categories.description"
+              name="description"
+              required
+            ></textarea>
+          </mat-form-field>
+          <button mat-raised-button color="primary" class="full-width">
+            <mat-icon class="mr-2">edit</mat-icon>Update Category
+          </button>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+</div>

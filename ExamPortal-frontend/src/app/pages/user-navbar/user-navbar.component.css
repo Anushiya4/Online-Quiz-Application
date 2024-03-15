@@ -1,0 +1,46 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+span {
+  cursor: pointer;
+}
+
+.title {
+  margin-left: 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.radius {
+  border-radius: 15px;
+  font-size: 20px;
+  margin-right: 24px;
+}
+
+@media screen and (max-width: 800px) {
+  .title {
+    margin-left: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+  }
+
+  .radius {
+    border-radius: 15px;
+    font-size: 16px;
+  }
+}
+
+mat-sidenav-container {
+  height: calc(100vh - 65px);
+}
+
+.content {
+  height: calc(100vh - 98px);
+}
+
+.img {
+  height: 70px;
+  width: 70px;
+}

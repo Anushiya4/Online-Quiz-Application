@@ -1,0 +1,22 @@
+<mat-card class="sidebar">
+  <mat-nav-list>
+    <mat-list-item
+      class="list"
+      *ngFor="let item of listItems"
+      [routerLink]="item.link"
+      routerLinkActive="active"
+    >
+      <mat-icon matListIcon>{{ item.icon }}</mat-icon>
+
+      {{ item.linkTitle }}
+    </mat-list-item>
+  </mat-nav-list>
+</mat-card>
+<!-- <mat-nav-list>
+  <mat-list-item routerLink="/admin/home">Home </mat-list-item>
+  <mat-list-item routerLink="/admin/profile">profile </mat-list-item>
+  <mat-list-item routerLink="/admin/add-category" *ngIf="isAdmin">add category </mat-list-item>
+  <mat-list-item routerLink="/admin/view-category">categoty </mat-list-item>
+  <mat-list-item routerLink="/admin/view-quiz">quiz </mat-list-item>
+  <mat-list-item routerLink="/admin/add-quiz" *ngIf="isAdmin">add </mat-list-item>
+</mat-nav-list> -->

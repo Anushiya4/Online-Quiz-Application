@@ -1,0 +1,20 @@
+.root {
+    margin-top: 80px;
+
+}
+
+.signupbtn {
+    color: blue;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.loginbtn {
+    width: 100%;
+    font-size: 18px;
+}
+
+.img {
+    height: 200px;
+    width: 200px;
+}

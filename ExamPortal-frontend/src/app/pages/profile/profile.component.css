@@ -1,0 +1,16 @@
+.profile_pic {
+  max-width: 100px;
+  max-height: 100px;
+  border: 3px solid #3f51b5;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.table {
+  width: 100%;
+}
+
+
+.container {
+  margin-top: 100px;
+}
